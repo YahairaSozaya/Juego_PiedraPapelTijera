@@ -1,0 +1,304 @@
+body{
+    background-image: url("images/fondo.jpg");
+    background-repeat: no repeat;
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+    background-attachment: fixed;
+}
+
+#contenedor{
+    display:grid;
+    width:100vw;
+    height: 100%;
+    grid-template-rows: 100px 30px 1fr 150px 20px;
+    grid-template-areas: "titulo"
+                "restart"
+                "score"
+                "elecciones"
+                "play";
+    justify-content: center;
+    opacity: 1;
+}
+
+.titulo{
+    grid-area: titulo;
+    text-align: center;
+    font-size: 40px;
+    color:whitesmoke;
+    font-weight: bold;
+    font-family: monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.restart{
+    grid-area: restart;
+    text-align: center;
+}
+
+.score{
+    grid-area: score;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.sub{
+    width: 400px;
+    height: 250px;
+    border: 6px solid rgb(51, 18, 95);
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    display:flex;
+    align-items: center;
+}
+
+.tiros{
+    display:flex;
+    justify-content: space-between;
+    bottom: 0;
+    top: 30px;
+    right: 0;
+    left:0;
+    position:absolute;
+    width: auto;
+    height: 50px;
+}
+
+.imagenes{
+    display:flex;
+    justify-content: space-between;
+    bottom: 0;
+    top: 100px;
+    right: 0;
+    left:0;
+    position:absolute;
+    width: auto;
+    height: 140px;
+}
+
+.tiro{
+    width: 100px;
+    background-color: wheat;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    color:tomato;
+    font-size: 20px;
+    font-family: monospace;
+    align-items: center;
+}
+
+
+.elecciones{
+    grid-area: elecciones;
+    text-align: center;
+    padding-top:10px;
+}
+
+.play{
+    grid-area: play;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#piedra{
+    background-image: url("images/piedra.jpg");
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    border-radius: 10px;
+    outline:none;
+}
+
+img{
+    width: 150px;
+    border-radius: 10px;
+}
+
+#papel{
+    background-image: url("images/papel.jpg");
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    border-radius: 10px;
+    outline:none;
+}
+
+#tijera{
+    background-image: url("images/tijera.jpg");
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    border-radius: 10px;
+    outline:none;
+}
+
+#piedra:hover{
+    border:none;
+}
+
+#papel:hover{
+    border: none;
+}
+
+#tijera:hover{
+    border: none;
+}
+
+#play, #restart{
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top:5px;
+    border-radius: 10px;
+    background-color: yellow;
+    border:none;
+    outline: none;
+    font-size:16px;
+}
+
+#play:hover{
+    background-color: yellowgreen;
+    border:none;
+}
+
+#restart:hover{
+    background-color: yellowgreen;
+    border:none;
+}
+
+span{
+    font-size: 80px;
+    color:white;
+}
+
+#resultado{
+    display:none;
+    width:300px;
+    height: 200px;
+    background-color: white;
+    position:absolute;
+    border-radius: 20px;
+    font-size: 30px;
+    color:red;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-family: monospace;  
+    top:100px;
+    margin-left:auto;
+    margin-right:auto;
+    left:0;
+    right:0;
+}
+
+
+
+
+@media screen and (max-width:500px){
+    body{
+        background-attachment: fixed;
+    }
+
+    .titulo{
+        padding:40px 0 40px 0;
+        font-size: 30px;
+    }
+
+    .restart{
+        margin:20px 0 40px 0;
+    }
+
+    .score .imagenes{
+        flex-direction: column;
+    }
+
+    .sub{
+        margin-top: 120px;
+        width: 90%;
+    }
+
+    .imagen1{
+        position:absolute;
+        top:-50px;
+        left:110px;
+        height: 150px;
+    }
+
+    .imagen2{
+        position:absolute;
+        top:190px;
+        left:110px;
+        height: 150px;
+    }
+
+    .tiros{
+        flex-direction: column;
+        height: 250px;
+        margin-top: 100px;
+        margin-left: 25px;
+    }
+    
+    .tiro, .tiro2{
+        width: 80px;
+    }
+
+    .elecciones{
+        margin-top: 80px;
+    }
+
+    .play{
+        padding:80px 0 80px 0;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:350px){
+    .sub{
+        width:60%;
+    }
+
+    .imagen1, .imagen2{
+        width: 90px;
+    }
+
+    .imagen1{
+        top:-50px;
+        left:130px;
+        height: 90px;
+    }
+    .imagen2{
+        top:265px;
+        left:130px;
+        height: 90px;
+    }
+
+    .tiros{
+        margin-left: 39%;
+    }
+
+    #piedra, #papel, #tijera{
+        width: 80px;
+        height: 80px;
+    }
+
+    
+}
+
+@media screen and (max-width:325px){
+    .imagen1{
+        top:-50px;
+        left:115px;
+        height: 90px;
+    }
+    .imagen2{
+        top:265px;
+        left:115px;
+        height: 90px;
+    }
+}

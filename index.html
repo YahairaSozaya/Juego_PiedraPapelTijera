@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <section id="contenedor">
+        <div class="titulo">
+            Piedra, papel o tijera
+        </div>
+        <div class="restart">
+            <button id="restart">restaurar</button>
+        </div>
+
+        <div class="score">
+            <div class="sub">
+                <span id="contador_user">0</span><span>:</span><span id="contador_cpu">0</span>
+            </div>
+
+            <div class="tiros">
+                <div class="tiro2">
+                    <p class="tiro">User</p>
+                </div>
+    
+                <div class="tiro2">
+                    <p class="tiro">PC</p>
+                </div>
+            </div>
+
+            <div class="imagenes">
+                <img id="imagen1" class="imagen1" src="images/inicio.jpg">
+                <img id="imagen2" class="imagen2" src="images/inicio.jpg">
+            </div>
+
+        </div>
+        
+
+        <div class="elecciones">
+            <button id="piedra"></button>
+            <button id="papel"></button>
+            <button id="tijera"></button>
+            
+        </div>
+        <div class="play">
+            <button id="play">Jugar</button>
+        </div>
+    </section>
+
+    <section id="resultado">
+        <div>
+            <p id="rest">Empate!</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
